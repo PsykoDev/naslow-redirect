@@ -13,7 +13,14 @@ module.exports = function NaslowRedirect(mod) {
 		pathone = new Vec3(12878, -24318, -134),
 		pathtwo = new Vec3(12494, -29119, 209)
 
-	let enabled = false
+	let enabled = false,
+		inTulu,
+		inAcarum,
+		inFron,
+		inFrontwo,
+		inBR,
+		inPath,
+		inPathtwo
 	
 	mod.hook('S_LOAD_TOPO', 3, event => {
 		inTulu = (event.zone === 7003)
